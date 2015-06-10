@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>B3 Gallery</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="libs/jquery-1.11.1.js"></script>
+    <script src="libs/ember-template-compiler-1.10.0.js"></script>
+    <script src="libs/ember-debug.js"></script>
+    <script src="libs/ember-handlebars-loader-0.0.2.js"></script>
+    <script src="libs/ember-data.js"></script>
+    <script src="libs/localstorage-adapter.js"></script>
+
+    <!--  application files  -->
+    <script src="B3.js"></script>
+    <script src="router.js"></script>
+    <script src="store.js"></script>
+
+    <!-- controllers -->
+    <script src="controllers/artwork.js"></script>
+    <script src="controllers/newArtwork.js"></script>
+
+    <!--  routes  -->
+    <script src="routes/artworks.js"></script>
+    <script src="routes/artwork.js"></script>
+
+    <!--  models  -->
+    <script src="models/artwork.js"></script>
+
+    <!--  pages  -->
+    <script>
+      EmberHandlebarsLoader.loadTemplates([
+        'home', 'artwork', 'artworks', 'application', 'newArtwork', 'about'
+      ]);
+    </script>
+
+  </head>
+  <body>
+
+  </body>
+</html>

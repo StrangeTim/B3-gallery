@@ -1,0 +1,7 @@
+<h1>B3 Gallery</h1>
+
+{{#each}}
+  <p>{{#link-to 'artwork' this.id}}{{artworkName}}{{/link-to}}</p>
+{{/each}}
+
+<p>{{#link-to 'newArtwork' classNames="btn btn-primary"}} Add Artwork {{/link-to}}</p>
