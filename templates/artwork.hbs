@@ -34,10 +34,9 @@
 
 {{else}}
   <div class="col-md-4">
-    <p>Owner: {{owner}}</p>
-    <p>Age of Item: {{age}}</p>
-    <p>Bid Identification Code: {{this.id}}</p>
-    <p>Description:{{description}}</p>
+    <p>Artwork:{{artworkImageURL}}</p>
+    <p>Artwork name:  {{artworkName}}</p>
+    <p>Description:  {{description}}</p>
     <br><br>
     <button class="btn btn-primary" {{action 'edit'}}>Edit</button>
     <button class="btn btn-danger"  {{action 'delete'}}>Delete</button>

@@ -5,12 +5,13 @@ B3.ArtworkController = Ember.ObjectController.extend({
       this.set('isEditing', true);
     },
     save: function() {
+      this.get('model').save();
       this.set('isEditing', false);
     },
     delete: function() {
-      if(confirm('Are you sure you want to remove this item?')) {
+      if(confirm('Are you sure you want to remove this artwork?')) {
         this.get('model').destroyRecord();
-        this.transitionToRoute('artworks');
+        this.transitionToRoute('artists');
       }
     }
   }

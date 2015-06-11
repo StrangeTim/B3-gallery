@@ -27,15 +27,30 @@
 </form>
 
 {{else}}
-<div class="col-md-6">
+  <img class="artistImageURL" {{bind-attr src=this.artistImageURL}}>
   <p>Bio:  {{bio}}</p>
   <br><br>
   <button class="btn btn-primary" {{action 'edit'}}>Edit</button>
   <button class="btn btn-danger"  {{action 'delete'}}>Delete</button>
-</div>
-<div class="col-md-6">
-  <img class="artistImageURL" {{bind-attr src=this.artistImageURL}}/>
-  <br><br><br><br>
-  <img class="imageURL" {{bind-attr src=this.imageURL}}/>
-</div>
 {{/if}}
+
+  <h3>Artworks</h3>
+
+  <p>{{#link-to 'newArtwork' this.id class="btn btn-default"}}Add artwork{{/link-to}}</p>
+
+  <br>
+  <div class="all-artists">
+    <img class="imageURL" {{bind-attr src=this.imageURL}}/>
+  </div>
+
+  {{#each artworks}}
+    <div class="all-artists">
+      <img class="imageURL" {{bind-attr src=this.artworkImageURL}}>
+      <br>
+      {{description}}
+      <br>
+      {{artworkName}}
+    </div>
+  {{/each}}
+
+  {{outlet}}

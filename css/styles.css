@@ -1,10 +1,11 @@
+.artistImageURL {
+  width: 300px;
+  float: left;
+  padding: 20px;
+}
 
 h1 {
   text-align: center;
-}
-
-img.itemImage {
-  width: 400px;
 }
 
 .artistLabel {

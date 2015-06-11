@@ -1,18 +1,20 @@
 B3.NewArtworkController = Ember.Controller.extend ({
+  needs: ['artist'],
   actions: {
     save: function() {
-      var newArtwork = this.store.createRecord('item', {
-        artworkName: this.get('itemName'),
+      var newArtwork = this.store.createRecord('artwork', {
+        artworkName: this.get('artworkName'),
         description: this.get('description'),
-        owner: this.get('owner'),
-        age: this.get('age'),
-        imageURL: this.get('imageURL')
+        artworkImageURL: this.get('artworkImageURL')
       });
       newArtwork.save();
-      // var bidNumber = this.id;
-      // newArtwork({bidNumber: bidNumber});
-      this.setProperties({artworkName: " ", description: " ", owner: " ", age: " ", imageURL: " "});
-      this.transitionToRoute('artworks');
+
+      var artist = this.get('controllers.artist.model');
+      artist.get('artworks').pushObject(newArtwork);
+      artist.save();
+
+      this.setProperties({artworkName: " ", description: " ", artworkImageURL: " "});
+      this.transitionToRoute('artist', artist.id);
     }
   }
 });
