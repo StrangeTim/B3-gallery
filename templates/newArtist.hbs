@@ -1,0 +1,25 @@
+<h1>Add a new artist:</h1>
+<br>
+<form>
+  <div class="form-group">
+    <label for="artistName">Artist name:</label>
+    {{input id="artistName" class="form-control" value=artistName}}
+  </div>
+
+  <div class="form-group">
+    <label for="bio">Bio:</label>
+    {{textarea id="bio" class="form-control" rows="10" value=bio}}
+  </div>
+
+  <div class="form-group">
+    <label for="artistImageURL">Artist Image:</label>
+    {{input id="artistImageURL" class="form-control" value=artistImageURL}}
+  </div>
+
+  <div class="form-group">
+    <label for="imageURL">Cover Art Image:</label>
+    {{input id="imageURL" class="form-control" value=imageURL}}
+  </div>
+
+  <button class="btn btn-primary" {{action 'save'}}>Save</button>
+</form>

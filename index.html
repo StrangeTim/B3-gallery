@@ -3,8 +3,6 @@
   <head>
     <title>B3 Gallery</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
     <script src="libs/jquery-1.11.1.js"></script>
     <script src="libs/ember-template-compiler-1.10.0.js"></script>
     <script src="libs/ember-debug.js"></script>
@@ -12,26 +10,39 @@
     <script src="libs/ember-data.js"></script>
     <script src="libs/localstorage-adapter.js"></script>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+
     <!--  application files  -->
     <script src="B3.js"></script>
     <script src="router.js"></script>
     <script src="store.js"></script>
 
     <!-- controllers -->
-    <script src="controllers/artwork.js"></script>
-    <script src="controllers/newArtwork.js"></script>
+
+    <script src="controllers/artwork.js"></script><!-- this controller is for all artworks -->
+    <script src="controllers/newArtwork.js"></script><!-- this allows admin to add new artworks to artists -->
+    <script src="controllers/artist.js"></script><!-- this allows viewers to look at individual artist, will be nested route -->
+    <script src="controllers/newArtist.js"></script><!-- this allows admin to add an artist -->
+
 
     <!--  routes  -->
     <script src="routes/artworks.js"></script>
     <script src="routes/artwork.js"></script>
+    <script src="routes/artists.js"></script>
+    <script src="routes/artist.js"></script>
+
 
     <!--  models  -->
     <script src="models/artwork.js"></script>
+    <script src="models/artist.js"></script>
 
     <!--  pages  -->
     <script>
       EmberHandlebarsLoader.loadTemplates([
-        'home', 'artwork', 'artworks', 'application', 'newArtwork', 'about'
+        'home', 'artwork', 'artworks', 'application', 'newArtwork',
+        'about', 'artists', 'artist', 'newArtist'
       ]);
     </script>
 

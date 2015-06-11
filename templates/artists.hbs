@@ -1,0 +1,16 @@
+<h1>Local Artists</h1>
+<p>{{#link-to 'newArtist' classNames="btn btn-primary"}} Add Artist {{/link-to}}</p>
+
+{{#each}}
+  <ul>
+    <li class="all-artists">
+      {{#link-to 'artist' this.id}}<img {{bind-attr src=this.imageURL}}>
+      <h3>{{artistName}}</h3>{{/link-to}}
+    </li>
+  </ul>
+{{/each}}
+
+
+
+
+{{outlet}}

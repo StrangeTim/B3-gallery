@@ -4,4 +4,7 @@ B3.Router.map(function() {
   this.resource('artwork', {path: 'artworks/:artwork_id'});
   this.resource('about');
   this.resource('newArtwork');
+  this.resource('newArtist');
+  this.resource('artists');
+  this.resource('artist',  {path: 'artists/:artist_id'});
 });
