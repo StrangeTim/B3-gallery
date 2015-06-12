@@ -8,6 +8,14 @@ h1 {
   text-align: center;
 }
 
+h3 {
+  text-align: center;
+}
+
+.divided-column {
+  border-right: 1px solid #000;
+}
+
 .artistLabel {
 
 }

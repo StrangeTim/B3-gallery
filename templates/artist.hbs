@@ -33,7 +33,7 @@
   <button class="btn btn-primary" {{action 'edit'}}>Edit</button>
   <button class="btn btn-danger"  {{action 'delete'}}>Delete</button>
 {{/if}}
-
+<div class="clearfix"></div>
   <h3>Artworks</h3>
 
   <p>{{#link-to 'newArtwork' this.id class="btn btn-default"}}Add artwork{{/link-to}}</p>
@@ -52,5 +52,5 @@
       {{artworkName}}
     </div>
   {{/each}}
-
+  <div class="clearfix"></div>
   {{outlet}}
