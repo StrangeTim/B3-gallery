@@ -1,0 +1,8 @@
+individual artwork edit / delete
+home page edit form
+border around artist image
+hover on image text
+artist art-type under name
+header links auto-resize
+standardized footer
+header and footer locked to same minimum size.
